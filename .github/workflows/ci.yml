@@ -53,14 +53,14 @@ jobs:
         if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.owner.login == github.repository_owner }}
         uses: wearerequired/lint-action@v1.10.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
           prettier: true
           auto_fix: true
           git_name: github-actions[bot]
           git_email: github-actions[bot]@users.noreply.github.com
           commit_message: 'chore(lint): ${linter} fix'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN }}
           neutral_check_on_warning: true
 
   smoke:
@@ -121,6 +121,6 @@ jobs:
           commit: 'chore: release'
           title: 'chore: release'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -33,20 +33,25 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16
-          cache: 'yarn'
+          cache: 'pnpm'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: '7'
 
       - name: Install NPM Dependencies
-        run: yarn install --prefer-offline --frozen-lockfile --ignore-engines
+        run: pnpm install --prefer-offline --frozen-lockfile --ignore-engines
         env:
           CI: true
-      
+
       - name: Status
         run: git status
 
       # Lint autofix cannot run on forks, so just skip those! See https://github.com/wearerequired/lint-action/issues/13
       - name: Lint (External)
         if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.owner.login != github.repository_owner }}
-        run: yarn lint
+        run: pnpm lint
         
       # Otherwise, run lint autofixer
       - name: Lint

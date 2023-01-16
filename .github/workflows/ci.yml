@@ -35,11 +35,16 @@ jobs:
           node-version: 16
           cache: 'pnpm'
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: '7'
+
       - name: Install NPM Dependencies
         run: pnpm install --prefer-offline --frozen-lockfile --ignore-engines
         env:
           CI: true
-      
+
       - name: Status
         run: git status
 

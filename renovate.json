@@ -1,0 +1,15 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": "Default preset for use with Redwerkz's repos",
+    "extends": [
+      "config:base"
+    ],
+    "dependencyDashboard": true,
+    "includeForks": true,
+    "packageRules": [
+      {
+        "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+        "automerge": true
+      }
+    ]
+  }

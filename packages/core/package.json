@@ -1,6 +1,6 @@
 {
-  "name": "astro-icon",
-  "version": "0.8.0",
+  "name": "astro-icons",
+  "version": "0.8.1",
   "type": "module",
   "exports": {
     ".": "./index.ts",
@@ -11,9 +11,8 @@
     "index.ts"
   ],
   "author": {
-    "name": "Nate Moore",
-    "email": "nate@natemoo.re",
-    "url": "https://twitter.com/n_moore"
+    "name": "Rychart Redwerkz",
+    "url": "https://advanced-astro.dev"
   },
   "keywords": [
     "astro",
@@ -27,14 +26,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/natemoo-re/astro-icon.git",
+    "url": "git+https://github.com/advanced-astro/astro-iconify.git",
     "directory": "packages/core"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/natemoo-re/astro-icon/issues"
+    "url": "https://github.com/advanced-astro/astro-iconify/issues"
   },
-  "homepage": "https://github.com/natemoo-re/astro-icon#readme",
+  "homepage": "https://github.com/advanced-astro/astro-iconify#readme",
   "dependencies": {
     "node-fetch": "^3.2.10",
     "resolve-pkg": "^2.0.0",

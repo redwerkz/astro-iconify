@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/natemoo-re/astro-icon#readme",
   "volta": {
-    "node": "16.13.0",
+    "node": "18.18.2",
     "yarn": "1.22.17"
   },
   "dependencies": {

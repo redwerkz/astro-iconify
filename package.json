@@ -24,7 +24,7 @@
   "homepage": "https://github.com/natemoo-re/astro-icon#readme",
   "volta": {
     "node": "16.13.0",
-    "yarn": "1.22.17"
+    "yarn": "1.22.22"
   },
   "dependencies": {
     "@changesets/cli": "^2.18.1",
